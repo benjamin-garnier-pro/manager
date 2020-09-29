@@ -2572,6 +2572,11 @@
   dependencies:
     "@types/node" ">= 8"
 
+"@ovh-ux/manager-config@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@ovh-ux/manager-config/-/manager-config-0.4.0.tgz#81171e361b8400870821632adddea7b46a240395"
+  integrity sha512-ZiLfkRNwCqnyQvYpN9Frx/WKXE9JEQhtkmoxIdhzDtkBjvuIHbC9uGH7rzh771xfuZcUPv8hmidwf0cjdpXCjQ==
+
 "@ovh-ux/ng-ovh-api-wrappers@^4.0.7":
   version "4.0.7"
   resolved "https://registry.yarnpkg.com/@ovh-ux/ng-ovh-api-wrappers/-/ng-ovh-api-wrappers-4.0.7.tgz#f07cff3c42ef1c9d1655e2300617528a7d8b2f4f"
@@ -14575,6 +14580,12 @@ ovh-api-services@^10.1.0:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/ovh-api-services/-/ovh-api-services-10.1.0.tgz#75d00f267b1398b681e2a84baf441089dedb6d6d"
   integrity sha512-TMDRdm5Xo0B+JcQpqQnLKP0SDUXUUJ9HYFjVpIkCkESIc1kwpBxhDIjZD3eyzlw6N40Xbajj9KdYgfbpDb+Xww==
+  dependencies:
+    lodash "^4.17.20"
+
+"ovh-api-services@git+https://github.com/ovh-ux/ovh-api-services.git#feat/overthebox-configuration":
+  version "10.1.0"
+  resolved "git+https://github.com/ovh-ux/ovh-api-services.git#e92c4ea31b593972130f081834ff276a5de94d31"
   dependencies:
     lodash "^4.17.20"
 
