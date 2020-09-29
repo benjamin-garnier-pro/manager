@@ -46,7 +46,7 @@
     "babel-loader": "^8.1.0",
     "babel-plugin-angularjs-annotate": "^0.10.0",
     "cache-loader": "^4.1.0",
-    "copy-webpack-plugin": "^4.6.0",
+    "copy-webpack-plugin": "^6.1.1",
     "css-loader": "^4.3.0",
     "file-loader": "^4.0.0",
     "html-webpack-plugin": "^4.5.0",
