@@ -31,15 +31,14 @@ export default class XdslMeetingCtrl {
       .searchOrderMeetings(this.$scope, {
         serviceName: this.serviceName,
       })
-      .then((data) => {
-        const { result } = data;
+      .then(({ result, error }) => {
         if (result) {
           this.meetingSlots.canBookFakeMeeting = result.canBookFakeMeeting;
           this.meetingSlots.slots = result.meetingSlots;
 
           let slots = [];
           let prevTitle;
-          data.result.meetingSlots.forEach((slot, index) => {
+          result.meetingSlots.forEach((slot, index) => {
             const title = moment(slot.startDate).format('ddd DD MMM YYYY');
             if (!prevTitle) {
               prevTitle = title;
@@ -61,10 +60,10 @@ export default class XdslMeetingCtrl {
             });
           });
           this.showMeetingSlots = true;
-        } else if (data.error) {
+        } else if (error) {
           // Display error
           this.errorMessage = this.$translate.instant('xdsl_meeting_error', {
-            error: data.error,
+            error,
           });
         }
       })
