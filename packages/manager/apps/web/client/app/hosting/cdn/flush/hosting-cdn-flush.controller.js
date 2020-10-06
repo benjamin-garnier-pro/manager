@@ -2,12 +2,13 @@ import get from 'lodash/get';
 
 export default class HostingFlushCdnCtrl {
   /* @ngInject */
-  constructor($scope, $rootScope, $stateParams, $translate, Hosting, Alerter) {
+  constructor($scope, $rootScope, $stateParams, $translate, Hosting, HostingCDN, Alerter) {
     this.$scope = $scope;
     this.$rootScope = $rootScope;
     this.$stateParams = $stateParams;
     this.$translate = $translate;
     this.Hosting = Hosting;
+    this.HostingCDN = HostingCDN;
     this.Alerter = Alerter;
   }
 
@@ -17,8 +18,9 @@ export default class HostingFlushCdnCtrl {
   }
 
   flushCdn() {
-    this.Hosting.flushCdn(this.$stateParams.productId)
-      .then(() => {
+    const isV1CDN = get(this.$scope.cdnProperties, 'version', '') === '2013v1';
+    const flushPromise = isV1CDN ? this.flushV1CDN() : this.flushSharedCDN();
+    flushPromise.then(() => {
         this.Alerter.success(
           this.$translate.instant('hosting_dashboard_cdn_flush_success'),
           this.$scope.alerts.main,
@@ -35,5 +37,21 @@ export default class HostingFlushCdnCtrl {
       .finally(() => {
         this.$scope.resetAction();
       });
+  }
+
+  /**
+   * Flushed all domains, stay to cover V1 CDN Client
+   */
+  flushV1CDN() {
+    return this.Hosting.flushCdn(this.$stateParams.productId);
+  }
+
+  /**
+   * Flushed by domain, implemented for CDN V2
+   */
+  flushSharedCDN() {
+    const {serviceName} = this.$scope.cdnProperties;
+    const {domain} = this.$scope.currentActionData;
+    return this.HostingCDN.flushCDNDomainCache(serviceName, domain.domain);
   }
 }

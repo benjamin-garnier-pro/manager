@@ -459,6 +459,14 @@
                                     data-translate="hosting_dashboard_service_activate_cdn_option"
                                 ></span>
                             </oui-action-menu-item>
+                            <oui-action-menu-item
+                                data-ng-if="hosting.hasCdn && cdnProperties.version === '2013v1' && flushCdnState === 'ok'"
+                                data-on-click="setAction('cdn/flush/hosting-cdn-flush')"
+                            >
+                                <span
+                                    data-translate="hosting_dashboard_service_flush_cdn"
+                                ></span>
+                            </oui-action-menu-item>
                         </oui-action-menu>
                     </oui-tile-definition>
                     <oui-tile-definition

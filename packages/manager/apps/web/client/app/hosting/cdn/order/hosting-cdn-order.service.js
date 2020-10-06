@@ -8,6 +8,8 @@ export default class HostingCdnOrderService {
   }
 
   async getCatalogAddon(ovhSubsidiary, serviceOption) {
+    console.log('ZM:: serviceOption', serviceOption);
+    console.log('ZM:: ovhSubsidiary', ovhSubsidiary);
     const { addons } = await this.WucOrderCartService.getProductPublicCatalog(
       ovhSubsidiary,
       'webHosting',
@@ -15,10 +17,14 @@ export default class HostingCdnOrderService {
 
     const addonPlanCode = serviceOption.planCode;
     const addon = find(addons, { planCode: addonPlanCode });
+    console.log('ZM:: addonPlanCode', addonPlanCode);
+    console.log('ZM:: addons', addons);
 
     if (!addon) {
+      console.log('ZM:: addon');
       throw new Error(`No ${addonPlanCode} addon found`);
     } else {
+      console.log('ZM:: ISSUE WHERE THE CALL IS FAILED, addon not found');
       return addon;
     }
   }
