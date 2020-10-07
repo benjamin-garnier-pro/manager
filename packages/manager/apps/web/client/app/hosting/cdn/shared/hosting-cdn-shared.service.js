@@ -10,13 +10,25 @@ export default class HostingCdnSharedService {
       rootPath: 'apiv6',
       data: {},
     }).then((list) => {
+        const lists = {no: [], v1: [], v2: []};
         list.forEach(hosting => {
           return this.getCDNProperties(hosting)
             .then((cdn) => {
-              cdn.version === 'v2' ? console.log('ZM:: isV2', hosting) : null;
+              if (cdn.version === 'v2') {
+                lists.v2.push(hosting);
+              } else if (cdn.version === '2013v1') {
+                lists.v1.push(hosting);
+              } else {
+                console.log('ZM:: Hosting.else', hosting);
+              }
             })
-            .catch((err) => { })
+            .catch((err) => {
+              lists.no.push(hosting);
+            });
+
         })
+
+        console.log('ZM:: HostingList', lists);
       });
   }
 

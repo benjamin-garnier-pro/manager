@@ -506,6 +506,12 @@ export default class {
             },
           ]);
         }
+
+        /**
+         * TODO: ZM:: to remove, just dev purposes (test)
+         */
+        this.HostingCdnSharedService.getAvailableHostings();
+
       });
   }
 
@@ -824,7 +830,8 @@ export default class {
   }
 
   handleCDNProperties() {
-    return this.HostingCdnSharedService.getCDNProperties(this.$scope.hosting.serviceName)
+    return this.HostingCdnSharedService
+      .getCDNProperties(this.$scope.hosting.serviceName)
       .then((cdn) => {
         this.$scope.cdnProperties = cdn;
       })
