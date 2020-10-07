@@ -11,8 +11,8 @@
         <oui-spinner></oui-spinner>
     </div>
 
-    <oui-message type="error" data-ng-if="$ctrl.errorMessage">
-        <span data-ng-bind-html="$ctrl.errorMessage"></span>
+    <oui-message type="error" data-ng-if="$ctrl.slots.errorMessage">
+        <span data-ng-bind-html="$ctrl.slots.errorMessage"></span>
     </oui-message>
 
     <oui-message type="success" data-ng-if="$ctrl.successMessage">
@@ -21,7 +21,7 @@
 
     <div
         class="widget-presentation py-3 move-number-config ft-meeting"
-        data-ng-if="$ctrl.showMeetingSlots && !ctrl.loading && !$ctrl.successMessage"
+        data-ng-if="$ctrl.slots.showMeetingSlots && !ctrl.loading && !$ctrl.successMessage"
     >
         <strong data-translate="xdsl_meeting_description"></strong>
         <div
@@ -36,9 +36,8 @@
         ></div>
         <div class="row">
             <div
-                class="oui-box oui-box_light m-3 col-md-2"
-                data-ng-repeat="meeting in $ctrl.meetings track by $index"
-                style="height: 15.625rem;"
+                class="oui-box oui-box_light m-3 col-md-2 meetings-box"
+                data-ng-repeat="meeting in $ctrl.slots.meetings track by $index"
             >
                 <h5 class="oui-box__heading" data-ng-bind="meeting.title"></h5>
                 <oui-radio
