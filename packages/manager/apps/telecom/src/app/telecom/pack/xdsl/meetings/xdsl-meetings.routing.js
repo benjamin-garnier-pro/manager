@@ -15,10 +15,9 @@ export default /* @ngInject */ ($stateProvider) => {
       slots: /* @ngInject */ ($translate, loadMeetings) => {
         const meetingSlots = {};
         const meetings = [];
-        let errorMessage = '';
         let showMeetingSlots = false;
 
-        const { result, error } = loadMeetings;
+        const { result } = loadMeetings;
         if (result) {
           meetingSlots.canBookFakeMeeting = result.canBookFakeMeeting;
           meetingSlots.slots = result.meetingSlots;
@@ -46,17 +45,11 @@ export default /* @ngInject */ ($stateProvider) => {
             });
           });
           showMeetingSlots = true;
-        } else if (error) {
-          // Display error
-          errorMessage = $translate.instant('xdsl_meeting_error', {
-            error,
-          });
         }
 
         return {
           meetingSlots,
           meetings,
-          errorMessage,
           showMeetingSlots,
         };
       },

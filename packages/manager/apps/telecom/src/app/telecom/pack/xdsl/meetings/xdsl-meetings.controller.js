@@ -77,7 +77,7 @@ export default class XdslMeetingCtrl {
         );
       })
       .catch((error) => {
-        this.slots.errorMessage = this.$translate.instant(
+        this.errorMessage = this.$translate.instant(
           'xdsl_meeting_order_error',
           {
             day: `<strong>${this.getDay()}</strong>`,
