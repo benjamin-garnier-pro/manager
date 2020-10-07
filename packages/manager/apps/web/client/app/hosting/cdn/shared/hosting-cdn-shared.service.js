@@ -1,8 +1,6 @@
 export default class HostingCdnSharedService {
-  /**
-   *
-   * @param OvhHttp
-   */
+
+  /* @ngInject */
   constructor(OvhHttp) {
     this.OvhHttp = OvhHttp;
   }
