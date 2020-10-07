@@ -22,7 +22,7 @@ angular
       $translate,
       Hosting,
       HOSTING,
-      HostingCDN,
+      HostingCdnSharedService,
       HOSTING_STATUS,
       HostingDomain,
       hostingSSLCertificate,
@@ -64,7 +64,7 @@ angular
         )
           .then((domains) => {
             console.log('ZM:: domains', $scope.hosting);
-            return HostingCDN.getSharedCDNDomains($scope.hosting.serviceName)
+            return HostingCdnSharedService.getSharedCDNDomains($scope.hosting.serviceName)
               .then((sharedDomains) => {
                 return {domains, sharedDomains}
               });

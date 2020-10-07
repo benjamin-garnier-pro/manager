@@ -101,8 +101,8 @@ export default /* @ngInject */ ($stateProvider) => {
         find(availableOptions, { family: 'cdn' }) ||
         goBackWithError('No serviceOption found'),
 
-      cdnProperties: /* @ngInject */ (HostingCDN, serviceName) => {
-        return HostingCDN
+      cdnProperties: /* @ngInject */ (HostingCdnSharedService, serviceName) => {
+        return HostingCdnSharedService
           .getCDNProperties(serviceName)
           .then((cdn) => {
             console.log('ZM:: cdnProperties.then', cdn);

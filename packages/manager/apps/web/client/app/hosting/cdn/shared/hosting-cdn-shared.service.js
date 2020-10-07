@@ -1,4 +1,4 @@
-export default class HostingCDN {
+export default class HostingCdnSharedService {
   /**
    *
    * @param OvhHttp

@@ -2,13 +2,13 @@ import get from 'lodash/get';
 
 export default class HostingFlushCdnCtrl {
   /* @ngInject */
-  constructor($scope, $rootScope, $stateParams, $translate, Hosting, HostingCDN, Alerter) {
+  constructor($scope, $rootScope, $stateParams, $translate, Hosting, HostingCdnSharedService, Alerter) {
     this.$scope = $scope;
     this.$rootScope = $rootScope;
     this.$stateParams = $stateParams;
     this.$translate = $translate;
     this.Hosting = Hosting;
-    this.HostingCDN = HostingCDN;
+    this.HostingCdnSharedService = HostingCdnSharedService;
     this.Alerter = Alerter;
   }
 
@@ -52,6 +52,6 @@ export default class HostingFlushCdnCtrl {
   flushSharedCDN() {
     const {serviceName} = this.$scope.cdnProperties;
     const {domain} = this.$scope.currentActionData;
-    return this.HostingCDN.flushCDNDomainCache(serviceName, domain.domain);
+    return this.HostingCdnSharedService.flushCDNDomainCache(serviceName, domain.domain);
   }
 }

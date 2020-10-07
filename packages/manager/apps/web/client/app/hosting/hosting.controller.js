@@ -41,7 +41,7 @@ export default class {
     HostingIndy,
     HostingOvhConfig,
     HostingTask,
-    HostingCDN,
+    HostingCdnSharedService,
     logs,
     pendingTasks,
     PrivateDatabase,
@@ -79,7 +79,7 @@ export default class {
     this.HostingIndy = HostingIndy;
     this.HostingOvhConfig = HostingOvhConfig;
     this.HostingTask = HostingTask;
-    this.HostingCDN = HostingCDN;
+    this.HostingCdnSharedService = HostingCdnSharedService;
     this.pendingTasks = pendingTasks;
     this.PrivateDatabase = PrivateDatabase;
     this.privateDatabasesDetachable = privateDatabasesDetachable;
@@ -824,7 +824,7 @@ export default class {
   }
 
   handleCDNProperties() {
-    return this.HostingCDN.getCDNProperties(this.$scope.hosting.serviceName)
+    return this.HostingCdnSharedService.getCDNProperties(this.$scope.hosting.serviceName)
       .then((cdn) => {
         this.$scope.cdnProperties = cdn;
       })
