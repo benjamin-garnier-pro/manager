@@ -2,7 +2,46 @@
     <oui-stepper>
         <oui-step-form
             name="foo"
-            header="Events on oui-step-form"
+            header="{{::'logs_order_selection_title' | translate}}"
+            description="{{::'logs_order_selection_subtitle' | translate}}"
+            on-submit="$ctrl.onSubmit(form)"
+        >
+            <div class="row">
+                <oui-select-picker
+                    class="mb-3 col-md-5"
+                    disabled="$ctrl.disabled"
+                    name="logsStandardOffer"
+                    model="$ctrl.model"
+                    label="{{::'logs_order_selection_details_standard_title' | translate}}"
+                    description="{{::'logs_order_selection_details_standard_description' | translate}}"
+                    values="$ctrl.values2"
+                >
+                    <oui-select-picker-footer>
+                        {{::'logs_order_selection_details_standard_price' |
+                        translate}}
+                    </oui-select-picker-footer>
+                </oui-select-picker>
+
+                <oui-select-picker
+                    class="mb-3 col-md-5"
+                    disabled="$ctrl.disabled"
+                    name="logsEnterpriseOffer"
+                    model="$ctrl.model"
+                    label="{{::'logs_order_selection_details_enterprise_title' | translate}}"
+                    description="{{::'logs_order_selection_details_enterprise_description' | translate}}"
+                    values="$ctrl.values2"
+                >
+                    <oui-select-picker-footer>
+                        {{::'logs_order_selection_details_enterprise_price' |
+                        translate}}
+                    </oui-select-picker-footer>
+                </oui-select-picker>
+            </div>
+        </oui-step-form>
+        <oui-step-form
+            name="foo"
+            header="{{::'logs_order_location_title' | translate}}"
+            description="{{::'logs_order_selection_subtitle' | translate}}"
             on-submit="$ctrl.onSubmit(form)"
         >
             <div class="row">
@@ -11,44 +50,88 @@
                     disabled="$ctrl.disabled"
                     name="ouiSelectPicker1"
                     model="$ctrl.model"
-                    label="{{::'logs_order_selection_details_standard_title' | translate}}"
-                    description="{{::'logs_order_selection_details_standard_description' | translate}}"
-                    values="$ctrl.values2"
+                    label="Value A"
+                    description="Description"
+                    values="$ctrl.values1"
                 >
-                    <oui-select-picker-footer>
-                        Lorem ipsum<br />
-                        <small>Dolor sit amet</small>
-                    </oui-select-picker-footer>
+                    <oui-select-picker-section
+                        >Section 1</oui-select-picker-section
+                    >
+                    <oui-select-picker-section
+                        >Section 2</oui-select-picker-section
+                    >
                 </oui-select-picker>
-
                 <oui-select-picker
                     class="mb-3 col-md-5"
                     disabled="$ctrl.disabled"
                     name="ouiSelectPicker1"
                     model="$ctrl.model"
-                    label="Value B"
-                    values="$ctrl.values2"
+                    label="Value A"
+                    description="Description"
+                    values="$ctrl.values1"
                 >
-                    <oui-select-picker-footer>
-                        Lorem ipsum<br />
-                        <small>Dolor sit amet</small>
-                    </oui-select-picker-footer>
+                    <oui-select-picker-section
+                        >Section 1</oui-select-picker-section
+                    >
+                    <oui-select-picker-section
+                        >Section 2</oui-select-picker-section
+                    >
                 </oui-select-picker>
             </div>
         </oui-step-form>
         <oui-step-form
             name="foo"
-            header="Events on oui-step-form"
+            header="{{::'logs_order_account_title' | translate}}"
             on-submit="$ctrl.onSubmit(form)"
         >
-            [...]
+            <label for="new_password" class="oui-label">Mot de passe</label>
+            <div class="oui-input-overlay">
+                <input
+                    class="oui-input"
+                    placeholder="Please insert your text..."
+                    type="text"
+                    ${select(state.label,
+                    state.options,
+                    state.default)}
+                />
+            </div>
+
+            <label for="new_password" class="oui-label">Mot de passe</label>
+            <oui-password
+                disabled="$ctrl.disabled"
+                model="$ctrl.model"
+                placeholder="Password"
+            >
+            </oui-password>
         </oui-step-form>
         <oui-step-form
             name="foo"
-            header="Events on oui-step-form"
+            header="{{::'logs_order_summary_title' | translate}}"
             on-submit="$ctrl.onSubmit(form)"
         >
-            [...]
+            <label for="new_password" class="oui-label">Type d'offre</label>
+            <p>logs data platform : Entreprise</p>
+
+            <label for="new_password" class="oui-label"
+                >Type de facturation</label
+            >
+            <p>Abonnement: 200€/mois</p>
+
+            <label for="new_password" class="oui-label"
+                >frais d'installation</label
+            >
+            <p>à la commande : 200€</p>
+
+            <label for="new_password" class="oui-label">total à regler</label>
+            <p>400€</p>
+
+            <label for="new_password" class="oui-label"
+                >moyen de paiement</label
+            >
+            <p>toggle</p>
+
+            <label for="new_password" class="oui-label">Contrat</label>
+            <p>checkbox</p>
         </oui-step-form>
     </oui-stepper>
 </div>
