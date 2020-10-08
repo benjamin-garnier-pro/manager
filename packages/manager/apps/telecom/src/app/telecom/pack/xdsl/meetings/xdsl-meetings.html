@@ -21,12 +21,12 @@
 
     <div
         class="widget-presentation py-3 move-number-config ft-meeting"
-        data-ng-if="$ctrl.slots.showMeetingSlots && !ctrl.loading && !$ctrl.successMessage"
+        data-ng-if="$ctrl.showMeetingSlots && !ctrl.loading && !$ctrl.successMessage"
     >
         <strong data-translate="xdsl_meeting_description"></strong>
         <div
             class="mt-3"
-            data-ng-show="!$ctrl.select.meetingSlots.slot"
+            data-ng-if="!$ctrl.select.meetingSlots.slot"
             data-translate="xdsl_meeting_programmed_meeting_select"
         ></div>
         <div

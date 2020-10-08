@@ -2,8 +2,7 @@ import get from 'lodash/get';
 
 export default class XdslMeetingCtrl {
   /* @ngInject */
-  constructor($scope, $translate, OvhApiXdsl) {
-    this.$scope = $scope;
+  constructor($translate, OvhApiXdsl) {
     this.$translate = $translate;
     this.OvhApiXdsl = OvhApiXdsl;
   }
@@ -15,6 +14,12 @@ export default class XdslMeetingCtrl {
         slot: null,
       },
     };
+
+    this.showMeetingSlots = false;
+
+    if (this.slots.meetings.length > 0) {
+      this.showMeetingSlots = true;
+    }
   }
 
   checkConfirm() {
