@@ -18,6 +18,7 @@ import constants from './logs-constants';
 import logsDetail from './detail/detail.module';
 import logsList from './list/list.module';
 import logsWelcome from './welcome/welcome.module';
+import logsOrder from './order/order.module';
 import routing from './logs.routing';
 
 const moduleName = 'ovhManagerDbaasLogsDashboard';
@@ -33,6 +34,7 @@ angular
     'ui.bootstrap',
     'ui.router',
     empty,
+    logsOrder,
     logsDetail,
     logsList,
     logsWelcome,

@@ -1,0 +1,54 @@
+<div class="container">
+    <oui-stepper>
+        <oui-step-form
+            name="foo"
+            header="Events on oui-step-form"
+            on-submit="$ctrl.onSubmit(form)"
+        >
+            <div class="row">
+                <oui-select-picker
+                    class="mb-3 col-md-5"
+                    disabled="$ctrl.disabled"
+                    name="ouiSelectPicker1"
+                    model="$ctrl.model"
+                    label="{{::'logs_order_selection_details_standard_title' | translate}}"
+                    description="{{::'logs_order_selection_details_standard_description' | translate}}"
+                    values="$ctrl.values2"
+                >
+                    <oui-select-picker-footer>
+                        Lorem ipsum<br />
+                        <small>Dolor sit amet</small>
+                    </oui-select-picker-footer>
+                </oui-select-picker>
+
+                <oui-select-picker
+                    class="mb-3 col-md-5"
+                    disabled="$ctrl.disabled"
+                    name="ouiSelectPicker1"
+                    model="$ctrl.model"
+                    label="Value B"
+                    values="$ctrl.values2"
+                >
+                    <oui-select-picker-footer>
+                        Lorem ipsum<br />
+                        <small>Dolor sit amet</small>
+                    </oui-select-picker-footer>
+                </oui-select-picker>
+            </div>
+        </oui-step-form>
+        <oui-step-form
+            name="foo"
+            header="Events on oui-step-form"
+            on-submit="$ctrl.onSubmit(form)"
+        >
+            [...]
+        </oui-step-form>
+        <oui-step-form
+            name="foo"
+            header="Events on oui-step-form"
+            on-submit="$ctrl.onSubmit(form)"
+        >
+            [...]
+        </oui-step-form>
+    </oui-stepper>
+</div>
