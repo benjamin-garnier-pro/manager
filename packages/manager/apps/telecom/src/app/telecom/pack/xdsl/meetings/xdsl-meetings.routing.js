@@ -12,10 +12,9 @@ export default /* @ngInject */ ($stateProvider) => {
           serviceName,
         });
       },
-      slots: /* @ngInject */ ($translate, loadMeetings) => {
+      slots: /* @ngInject */ (loadMeetings) => {
         const meetingSlots = {};
         const meetings = [];
-        let showMeetingSlots = false;
 
         const { result } = loadMeetings;
         if (result) {
@@ -44,13 +43,11 @@ export default /* @ngInject */ ($stateProvider) => {
               selected: false,
             });
           });
-          showMeetingSlots = true;
         }
 
         return {
           meetingSlots,
           meetings,
-          showMeetingSlots,
         };
       },
     },
