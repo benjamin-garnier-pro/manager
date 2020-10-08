@@ -50,7 +50,7 @@ export default class HostingFlushCdnCtrl {
    * Flushed by domain, implemented for CDN V2
    */
   flushSharedCDN() {
-    const {serviceName} = this.$scope.cdnProperties;
+    const {serviceName} = this.$scope.hosting;
     const {domain} = this.$scope.currentActionData;
     return this.HostingCdnSharedService.flushCDNDomainCache(serviceName, domain.domain);
   }

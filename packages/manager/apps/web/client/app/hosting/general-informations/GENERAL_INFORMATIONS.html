@@ -20,6 +20,7 @@
             type="info"
             aria-close-button-label="Close"
             on-dismiss="$ctrl.onDismiss()"
+            data-ng-if="::!cdnProperties || cdnProperties.version === '2013v1'"
             dismissable
         >
             <span data-ng-bind="::$ctrl.getCDNBannerMSG()"></span>
