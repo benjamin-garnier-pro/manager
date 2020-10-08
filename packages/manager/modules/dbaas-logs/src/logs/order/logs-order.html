@@ -1,20 +1,21 @@
 <div class="container">
     <oui-stepper>
         <oui-step-form
-            name="foo"
+            name="logs_order_selection"
             header="{{::'logs_order_selection_title' | translate}}"
             description="{{::'logs_order_selection_subtitle' | translate}}"
             on-submit="$ctrl.onSubmit(form)"
+            valid="ctrl.selectedOffer"
         >
             <div class="row">
                 <oui-select-picker
                     class="mb-3 col-md-5"
-                    disabled="$ctrl.disabled"
                     name="logsStandardOffer"
-                    model="$ctrl.model"
+                    model="$ctrl.selectedOffer"
                     label="{{::'logs_order_selection_details_standard_title' | translate}}"
                     description="{{::'logs_order_selection_details_standard_description' | translate}}"
-                    values="$ctrl.values2"
+                    values="['standard']"
+                    on-change="ctrl.selectOffer('standard')"
                 >
                     <oui-select-picker-footer>
                         {{::'logs_order_selection_details_standard_price' |
@@ -24,12 +25,12 @@
 
                 <oui-select-picker
                     class="mb-3 col-md-5"
-                    disabled="$ctrl.disabled"
                     name="logsEnterpriseOffer"
-                    model="$ctrl.model"
+                    model="$ctrl.selectedOffer"
                     label="{{::'logs_order_selection_details_enterprise_title' | translate}}"
                     description="{{::'logs_order_selection_details_enterprise_description' | translate}}"
-                    values="$ctrl.values2"
+                    values="['enterprise']"
+                    on-change="ctrl.selectOffer('enterprise')"
                 >
                     <oui-select-picker-footer>
                         {{::'logs_order_selection_details_enterprise_price' |
@@ -39,43 +40,33 @@
             </div>
         </oui-step-form>
         <oui-step-form
-            name="foo"
+            name="logs_order_location"
             header="{{::'logs_order_location_title' | translate}}"
             description="{{::'logs_order_selection_subtitle' | translate}}"
             on-submit="$ctrl.onSubmit(form)"
+            skippable="false"
+            valid="ctrl.selectedDatacenter"
         >
             <div class="row">
                 <oui-select-picker
                     class="mb-3 col-md-5"
-                    disabled="$ctrl.disabled"
                     name="ouiSelectPicker1"
-                    model="$ctrl.model"
-                    label="Value A"
-                    description="Description"
-                    values="$ctrl.values1"
+                    model="ctrl.selectedDatacenter"
+                    label="Beauharnois"
+                    values="['BHS1']"
+                    on-change="ctrl.selectDatacenter('BHS1')"
                 >
-                    <oui-select-picker-section
-                        >Section 1</oui-select-picker-section
-                    >
-                    <oui-select-picker-section
-                        >Section 2</oui-select-picker-section
-                    >
+                    <oui-select-picker-section>BHS1</oui-select-picker-section>
                 </oui-select-picker>
                 <oui-select-picker
                     class="mb-3 col-md-5"
-                    disabled="$ctrl.disabled"
                     name="ouiSelectPicker1"
-                    model="$ctrl.model"
-                    label="Value A"
-                    description="Description"
-                    values="$ctrl.values1"
+                    model="ctrl.selectedDatacenter"
+                    label="Gravelines"
+                    values="['GRA1']"
+                    on-change="ctrl.selectDatacenter('GRA1')"
                 >
-                    <oui-select-picker-section
-                        >Section 1</oui-select-picker-section
-                    >
-                    <oui-select-picker-section
-                        >Section 2</oui-select-picker-section
-                    >
+                    <oui-select-picker-section>GRA1</oui-select-picker-section>
                 </oui-select-picker>
             </div>
         </oui-step-form>
@@ -84,24 +75,21 @@
             header="{{::'logs_order_account_title' | translate}}"
             on-submit="$ctrl.onSubmit(form)"
         >
-            <label for="new_password" class="oui-label">Mot de passe</label>
+            <label for="new_password" class="oui-label"
+                >{{::'logs_order_account_input_name' | translate}}</label
+            >
             <div class="oui-input-overlay">
                 <input
                     class="oui-input"
-                    placeholder="Please insert your text..."
                     type="text"
-                    ${select(state.label,
-                    state.options,
-                    state.default)}
+                    ng-model="ctrl.accountName"
                 />
             </div>
 
-            <label for="new_password" class="oui-label">Mot de passe</label>
-            <oui-password
-                disabled="$ctrl.disabled"
-                model="$ctrl.model"
-                placeholder="Password"
+            <label for="new_password" class="oui-label"
+                >{{::'logs_order_account_input_password' | translate}}</label
             >
+            <oui-password model="ctrl.accountPassword" class="mb-3">
             </oui-password>
         </oui-step-form>
         <oui-step-form

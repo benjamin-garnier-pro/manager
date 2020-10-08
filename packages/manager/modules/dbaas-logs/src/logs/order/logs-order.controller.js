@@ -37,6 +37,10 @@ export default class LogsOrderCtrl {
 
   $onInit() {
     this.fetchOffer();
+    this.selectedOffer = undefined;
+    this.selectedDatacenter = undefined;
+    this.accountName = '';
+    this.accountPassword = '';
     this.guides = reduce(
       GUIDES,
       (list, guide) => [
@@ -63,6 +67,14 @@ export default class LogsOrderCtrl {
         this.urls.orderURL = url;
       },
     );
+  }
+
+  selectOffer(offerName) {
+    this.selectedOffer = offerName;
+  }
+
+  selectDatacenter(datacenter) {
+    this.selectedDatacenter = datacenter;
   }
 
   fetchOffer() {
