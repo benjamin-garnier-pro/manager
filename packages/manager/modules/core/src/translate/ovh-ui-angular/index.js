@@ -13,6 +13,7 @@ angular
     (
       $transitions,
       $translate,
+      ouiBackButtonConfiguration,
       ouiClipboardConfiguration,
       ouiCriteriaAdderConfiguration,
       ouiDatagridConfiguration,
@@ -24,6 +25,11 @@ angular
       ouiStepperConfiguration,
     ) => {
       $translate.refresh().then(() => {
+        set(ouiBackButtonConfiguration, 'translations', {
+          backTo: 'common_back_button_back_to',
+          backToPreviousPage: 'common_back_button_back_to_previous_page',
+        });
+
         set(ouiClipboardConfiguration, 'translations', {
           copyToClipboardLabel: $translate.instant(
             'common_clipboard_copy_to_clipboard',
