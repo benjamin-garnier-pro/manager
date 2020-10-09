@@ -89,6 +89,7 @@
   "logs_order_summary_billing_selection_default": "Payer avec le moyen de paiement « par défaut »",
   "logs_order_summary_billing_selection_alt": "Payer avec un autre moyen de paiement, via un bon de commande",
   "logs_order_summary_info_comsuption": "Votre consommation sera débitée chaque mois, sur votre moyen de paiement par défaut. Vous n’avez pas configuré de moyen de paiement ? Il vous faudra alors vous acquitter de la facture manuellement, via le moyen de paiement de votre choix.",
+  "logs_order_summary_info_next_month": "Le mois prochain, votre facturation sera calculée en fonction du prorata temporis de votre commande.",
   "logs_order_summary_contract": "Contrat",
   "logs_order_summary_contract_checkbox": "Je reconnais avoir pris connaissance du contrat suivant :",
   "logs_order_summary_contract_data_protection": "OVH_Data_Protection_agreement",

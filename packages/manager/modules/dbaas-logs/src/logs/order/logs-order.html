@@ -1,125 +1,138 @@
 <div class="container">
     <oui-stepper>
-        <oui-step-form
-            name="logs_order_selection"
-            header="{{::'logs_order_selection_title' | translate}}"
-            description="{{::'logs_order_selection_subtitle' | translate}}"
-            on-submit="$ctrl.onSubmit(form)"
-            valid="ctrl.selectedOffer"
+        <ovh-manager-product-offers
+            workflow-type="order"
+            workflow-options=":: ctrl.workflowOptions"
+            pricing-type=":: ctrl.pricingType.PRICING_CAPACITIES.RENEW"
+            user=":: ctrl.user"
+            on-error=":: ctrl.displayError(error)"
+            on-success=":: ctrl.displaySuccess(checkout)"
+            send-current-state=":: ctrl.getOrderState(state)"
         >
-            <div class="row">
-                <oui-select-picker
-                    class="mb-3 col-md-5"
-                    name="logsStandardOffer"
-                    model="$ctrl.selectedOffer"
-                    label="{{::'logs_order_selection_details_standard_title' | translate}}"
-                    description="{{::'logs_order_selection_details_standard_description' | translate}}"
-                    values="['standard']"
-                    on-change="ctrl.selectOffer('standard')"
+            <oui-step-form
+                name="logs_order_selection"
+                header="{{::'logs_order_selection_title' | translate}}"
+                description="{{::'logs_order_selection_subtitle' | translate}}"
+                on-submit="$ctrl.onSubmit(form)"
+                valid="ctrl.selectedOffer"
+            >
+                <div class="row">
+                    <oui-select-picker
+                        class="mb-3 col-md-5"
+                        name="logsStandardOffer"
+                        model="$ctrl.selectedOffer"
+                        label="{{::'logs_order_selection_details_standard_title' | translate}}"
+                        description="{{::'logs_order_selection_details_standard_description' | translate}}"
+                        values="['standard']"
+                        on-change="ctrl.selectOffer('standard')"
+                    >
+                        <oui-select-picker-footer>
+                            {{::'logs_order_selection_details_standard_price' |
+                            translate}}
+                        </oui-select-picker-footer>
+                    </oui-select-picker>
+
+                    <oui-select-picker
+                        class="mb-3 col-md-5"
+                        name="logsEnterpriseOffer"
+                        model="$ctrl.selectedOffer"
+                        label="{{::'logs_order_selection_details_enterprise_title' | translate}}"
+                        description="{{::'logs_order_selection_details_enterprise_description' | translate}}"
+                        values="['enterprise']"
+                        on-change="ctrl.selectOffer('enterprise')"
+                    >
+                        <oui-select-picker-footer>
+                            {{::'logs_order_selection_details_enterprise_price'
+                            | translate}}
+                        </oui-select-picker-footer>
+                    </oui-select-picker>
+                </div>
+            </oui-step-form>
+            <oui-step-form
+                name="logs_order_location"
+                header="{{::'logs_order_location_title' | translate}}"
+                description="{{::'logs_order_selection_subtitle' | translate}}"
+                on-submit="$ctrl.onSubmit(form)"
+                skippable="false"
+                valid="ctrl.selectedDatacenter"
+            >
+                <div class="row">
+                    <oui-select-picker
+                        class="mb-3 col-md-5"
+                        name="ouiSelectPicker1"
+                        model="ctrl.selectedDatacenter"
+                        label="Beauharnois"
+                        values="['BHS1']"
+                        on-change="ctrl.selectDatacenter('BHS1')"
+                    >
+                        <oui-select-picker-section
+                            >BHS1</oui-select-picker-section
+                        >
+                    </oui-select-picker>
+                    <oui-select-picker
+                        class="mb-3 col-md-5"
+                        name="ouiSelectPicker1"
+                        model="ctrl.selectedDatacenter"
+                        label="Gravelines"
+                        values="['GRA1']"
+                        on-change="ctrl.selectDatacenter('GRA1')"
+                    >
+                        <oui-select-picker-section
+                            >GRA1</oui-select-picker-section
+                        >
+                    </oui-select-picker>
+                </div>
+            </oui-step-form>
+            <oui-step-form
+                name="foo"
+                header="{{::'logs_order_summary_title' | translate}}"
+                on-submit="$ctrl.onSubmit(form)"
+            >
+                <label for="new_password" class="oui-label">Type d'offre</label>
+                <p>logs data platform : Entreprise</p>
+
+                <label for="new_password" class="oui-label"
+                    >Type de facturation</label
                 >
-                    <oui-select-picker-footer>
-                        {{::'logs_order_selection_details_standard_price' |
-                        translate}}
-                    </oui-select-picker-footer>
-                </oui-select-picker>
+                <p>Abonnement: 200€/mois</p>
 
-                <oui-select-picker
-                    class="mb-3 col-md-5"
-                    name="logsEnterpriseOffer"
-                    model="$ctrl.selectedOffer"
-                    label="{{::'logs_order_selection_details_enterprise_title' | translate}}"
-                    description="{{::'logs_order_selection_details_enterprise_description' | translate}}"
-                    values="['enterprise']"
-                    on-change="ctrl.selectOffer('enterprise')"
+                <label for="new_password" class="oui-label"
+                    >frais d'installation</label
                 >
-                    <oui-select-picker-footer>
-                        {{::'logs_order_selection_details_enterprise_price' |
-                        translate}}
-                    </oui-select-picker-footer>
-                </oui-select-picker>
-            </div>
-        </oui-step-form>
-        <oui-step-form
-            name="logs_order_location"
-            header="{{::'logs_order_location_title' | translate}}"
-            description="{{::'logs_order_selection_subtitle' | translate}}"
-            on-submit="$ctrl.onSubmit(form)"
-            skippable="false"
-            valid="ctrl.selectedDatacenter"
-        >
-            <div class="row">
-                <oui-select-picker
-                    class="mb-3 col-md-5"
-                    name="ouiSelectPicker1"
-                    model="ctrl.selectedDatacenter"
-                    label="Beauharnois"
-                    values="['BHS1']"
-                    on-change="ctrl.selectDatacenter('BHS1')"
+                <p>à la commande : 200€</p>
+
+                <label for="new_password" class="oui-label"
+                    >total à regler</label
                 >
-                    <oui-select-picker-section>BHS1</oui-select-picker-section>
-                </oui-select-picker>
-                <oui-select-picker
-                    class="mb-3 col-md-5"
-                    name="ouiSelectPicker1"
-                    model="ctrl.selectedDatacenter"
-                    label="Gravelines"
-                    values="['GRA1']"
-                    on-change="ctrl.selectDatacenter('GRA1')"
+                <p>400€</p>
+
+                <div class="oui-message oui-message_info" role="alert">
+                    <span
+                        class="oui-message__icon oui-icon oui-icon-info-circle"
+                        aria-hidden="true"
+                    ></span>
+                    <p class="oui-message__body">
+                        {{::'logs_order_summary_info_next_month' | translate}}
+                    </p>
+                </div>
+
+                <label for="new_password" class="oui-label"
+                    >moyen de paiement</label
                 >
-                    <oui-select-picker-section>GRA1</oui-select-picker-section>
-                </oui-select-picker>
-            </div>
-        </oui-step-form>
-        <oui-step-form
-            name="foo"
-            header="{{::'logs_order_account_title' | translate}}"
-            on-submit="$ctrl.onSubmit(form)"
-        >
-            <label for="new_password" class="oui-label"
-                >{{::'logs_order_account_input_name' | translate}}</label
-            >
-            <div class="oui-input-overlay">
-                <input
-                    class="oui-input"
-                    type="text"
-                    ng-model="ctrl.accountName"
-                />
-            </div>
+                <p>toggle</p>
+                <div class="oui-message oui-message_info" role="alert">
+                    <span
+                        class="oui-message__icon oui-icon oui-icon-info-circle"
+                        aria-hidden="true"
+                    ></span>
+                    <p class="oui-message__body">
+                        {{::'logs_order_summary_info_comsuption' | translate}}
+                    </p>
+                </div>
 
-            <label for="new_password" class="oui-label"
-                >{{::'logs_order_account_input_password' | translate}}</label
-            >
-            <oui-password model="ctrl.accountPassword" class="mb-3">
-            </oui-password>
-        </oui-step-form>
-        <oui-step-form
-            name="foo"
-            header="{{::'logs_order_summary_title' | translate}}"
-            on-submit="$ctrl.onSubmit(form)"
-        >
-            <label for="new_password" class="oui-label">Type d'offre</label>
-            <p>logs data platform : Entreprise</p>
-
-            <label for="new_password" class="oui-label"
-                >Type de facturation</label
-            >
-            <p>Abonnement: 200€/mois</p>
-
-            <label for="new_password" class="oui-label"
-                >frais d'installation</label
-            >
-            <p>à la commande : 200€</p>
-
-            <label for="new_password" class="oui-label">total à regler</label>
-            <p>400€</p>
-
-            <label for="new_password" class="oui-label"
-                >moyen de paiement</label
-            >
-            <p>toggle</p>
-
-            <label for="new_password" class="oui-label">Contrat</label>
-            <p>checkbox</p>
-        </oui-step-form>
+                <label for="new_password" class="oui-label">Contrat</label>
+                <p>checkbox</p>
+            </oui-step-form>
+        </ovh-manager-product-offers>
     </oui-stepper>
 </div>

@@ -39,8 +39,6 @@ export default class LogsOrderCtrl {
     this.fetchOffer();
     this.selectedOffer = undefined;
     this.selectedDatacenter = undefined;
-    this.accountName = '';
-    this.accountPassword = '';
     this.guides = reduce(
       GUIDES,
       (list, guide) => [
