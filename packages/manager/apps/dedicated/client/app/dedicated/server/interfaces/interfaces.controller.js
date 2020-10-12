@@ -10,7 +10,6 @@ export default class {
   }
 
   $onInit() {
-    console.log('init');
     this.loadMessages();
     this.loading = true;
     this.taskPolling.promise
