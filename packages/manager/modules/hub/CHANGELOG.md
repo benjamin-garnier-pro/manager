@@ -1,3 +1,33 @@
+## [2.1.6](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub@2.1.5...@ovh-ux/manager-hub@2.1.6) (2020-11-17)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 644] ([d9426c2](https://github.com/ovh/manager/commit/d9426c2de58f544c096f1c58ee6568085b7dae6f))
+* **i18n:** add missing translations [CDS 650] ([6e72d24](https://github.com/ovh/manager/commit/6e72d24aaa5dd085e207e67f8c557b27f2e9e29f))
+* add essentials to hub ([accf87a](https://github.com/ovh/manager/commit/accf87a948dc9121ed40671cc2a03a48629264a8))
+
+
+
+## [2.1.5](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub@2.1.4...@ovh-ux/manager-hub@2.1.5) (2020-10-28)
+
+
+### Bug Fixes
+
+* **components.catalog-items:** avoid duplicate track by keys ([#3946](https://github.com/ovh/manager/issues/3946)) ([2fcd12b](https://github.com/ovh/manager/commit/2fcd12ba3044316f924c531bc228a6e2c1830919))
+* **peer-deps:** upgrade @ovh-ux/ui-kit to v4.4.1 ([8254623](https://github.com/ovh/manager/commit/82546237336e185ae7d973a1bb2aabddbb50112e))
+
+
+
+## [2.1.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub@2.1.3...@ovh-ux/manager-hub@2.1.4) (2020-10-20)
+
+
+### Bug Fixes
+
+* **deps:** upgrade ovh-api-services to v11.0.0 ([#3869](https://github.com/ovh/manager/issues/3869)) ([df90e4d](https://github.com/ovh/manager/commit/df90e4de660920e3cd07b2ff6b4452b0aa861377))
+
+
+
 ## [2.1.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-hub@2.1.2...@ovh-ux/manager-hub@2.1.3) (2020-10-07)
 
 

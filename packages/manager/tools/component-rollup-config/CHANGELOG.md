@@ -1,3 +1,21 @@
+# [7.3.0](https://github.com/ovh/manager/compare/@ovh-ux/component-rollup-config@7.2.1...@ovh-ux/component-rollup-config@7.3.0) (2020-10-28)
+
+
+### Features
+
+* add core-js to polyfill ([1411e1c](https://github.com/ovh/manager/commit/1411e1ca873d1ffd715c43fcadfe96f26e5be874))
+
+
+
+## [7.2.1](https://github.com/ovh-ux/manager/compare/@ovh-ux/component-rollup-config@7.2.0...@ovh-ux/component-rollup-config@7.2.1) (2020-10-13)
+
+
+### Bug Fixes
+
+* **plugins.uirouter:** check if item key is defined ([#3776](https://github.com/ovh-ux/manager/issues/3776)) ([b27c9a8](https://github.com/ovh-ux/manager/commit/b27c9a8185de6bc0c8e8824a0e6ff58b12cdcca3))
+
+
+
 # [7.2.0](https://github.com/ovh-ux/manager/compare/@ovh-ux/component-rollup-config@7.1.0...@ovh-ux/component-rollup-config@7.2.0) (2020-07-08)
 
 

@@ -1,3 +1,74 @@
+## [11.0.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-cloud@11.0.0...@ovh-ux/manager-cloud@11.0.1) (2020-11-16)
+
+
+### Performance Improvements
+
+* remove unused jquery-cookie dependency ([#4014](https://github.com/ovh/manager/issues/4014)) ([9114662](https://github.com/ovh/manager/commit/9114662d99b4a8d71d8060af7d6d6556dcf0d331))
+
+
+
+# [11.0.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-cloud@10.2.8...@ovh-ux/manager-cloud@11.0.0) (2020-10-28)
+
+
+### Bug Fixes
+
+* add missing dependencies ([210faae](https://github.com/ovh/manager/commit/210faaec7cee592f09b94818265376cf58017869))
+* remove dbaas logs import ([ba110d4](https://github.com/ovh/manager/commit/ba110d4fdf560478873a858537fa388fad2b6b85))
+* **deps:** upgrade webpack to v4.44.2 ([fc868d2](https://github.com/ovh/manager/commit/fc868d2670b0de220837c8917d90fa3020e6d4ca))
+* **preloader:** attach preloader with user language ([6eb9cc1](https://github.com/ovh/manager/commit/6eb9cc1cc362f8cc2426965d8563de1af9dee0c8))
+* add regenerator-runtime ([982d03a](https://github.com/ovh/manager/commit/982d03a1054ecc3c6fb886f57c8b8f9afe0e7001))
+
+
+### Features
+
+* scaffold dbaas logs app and module ([ccb53d0](https://github.com/ovh/manager/commit/ccb53d0189800937cfd1717e026505a8cbbd8158))
+* **cui.dual-list:** move to cuc ([676c298](https://github.com/ovh/manager/commit/676c29871a136b086600329b744a5f363bd5ce40))
+* **moment-format:** add filter to cuc ([8427623](https://github.com/ovh/manager/commit/842762371f47adb5a23130c2a04f3588e4ed0774))
+* add core-js to polyfill ([1411e1c](https://github.com/ovh/manager/commit/1411e1ca873d1ffd715c43fcadfe96f26e5be874))
+
+
+### BREAKING CHANGES
+
+* Init dbaas logs app and module
+
+
+
+## [10.2.8](https://github.com/ovh/manager/compare/@ovh-ux/manager-cloud@10.2.7...@ovh-ux/manager-cloud@10.2.8) (2020-10-26)
+
+
+### Bug Fixes
+
+* **preloader:** attach preloader with user language ([6c65188](https://github.com/ovh/manager/commit/6c6518888146a4c90bd9268d0db40cb2d2df699f))
+
+
+
+## [10.2.7](https://github.com/ovh/manager/compare/@ovh-ux/manager-cloud@10.2.6...@ovh-ux/manager-cloud@10.2.7) (2020-10-20)
+
+
+### Bug Fixes
+
+* **deps:** add missing dependency ([#3874](https://github.com/ovh/manager/issues/3874)) ([0750a41](https://github.com/ovh/manager/commit/0750a418809a158262ea27cdb5c42080592dec90))
+
+
+
+## [10.2.6](https://github.com/ovh/manager/compare/@ovh-ux/manager-cloud@10.2.5...@ovh-ux/manager-cloud@10.2.6) (2020-10-20)
+
+
+### Bug Fixes
+
+* **deps:** upgrade ovh-api-services to v11.0.0 ([#3869](https://github.com/ovh/manager/issues/3869)) ([df90e4d](https://github.com/ovh/manager/commit/df90e4de660920e3cd07b2ff6b4452b0aa861377))
+
+
+
+## [10.2.5](https://github.com/ovh/manager/compare/@ovh-ux/manager-cloud@10.2.4...@ovh-ux/manager-cloud@10.2.5) (2020-10-13)
+
+
+### Bug Fixes
+
+* **deps:** upgrade to @ovh-ux/manager-config v2.0.0 ([ca3f955](https://github.com/ovh/manager/commit/ca3f9554c13b1436cbdeed3de8ac69e399d5dd93))
+
+
+
 ## [10.2.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-cloud@10.2.3...@ovh-ux/manager-cloud@10.2.4) (2020-09-28)
 
 

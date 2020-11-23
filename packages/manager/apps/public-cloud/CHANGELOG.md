@@ -1,3 +1,64 @@
+## [4.3.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-public-cloud@4.3.0...@ovh-ux/manager-public-cloud@4.3.1) (2020-11-16)
+
+
+### Performance Improvements
+
+* remove unused angular-vs-repeat dependency ([#4010](https://github.com/ovh/manager/issues/4010)) ([4691d0c](https://github.com/ovh/manager/commit/4691d0cd429270e8fa16a7bcf16ce0b48d0e295c))
+
+
+
+# [4.3.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-public-cloud@4.2.6...@ovh-ux/manager-public-cloud@4.3.0) (2020-10-28)
+
+
+### Bug Fixes
+
+* **deps:** upgrade webpack to v4.44.2 ([fc868d2](https://github.com/ovh/manager/commit/fc868d2670b0de220837c8917d90fa3020e6d4ca))
+* **preloader:** attach preloader with user language ([6eb9cc1](https://github.com/ovh/manager/commit/6eb9cc1cc362f8cc2426965d8563de1af9dee0c8))
+* add regenerator-runtime ([982d03a](https://github.com/ovh/manager/commit/982d03a1054ecc3c6fb886f57c8b8f9afe0e7001))
+
+
+### Features
+
+* add core-js to polyfill ([1411e1c](https://github.com/ovh/manager/commit/1411e1ca873d1ffd715c43fcadfe96f26e5be874))
+
+
+
+## [4.2.6](https://github.com/ovh/manager/compare/@ovh-ux/manager-public-cloud@4.2.5...@ovh-ux/manager-public-cloud@4.2.6) (2020-10-26)
+
+
+### Bug Fixes
+
+* **preloader:** attach preloader with user language ([6c65188](https://github.com/ovh/manager/commit/6c6518888146a4c90bd9268d0db40cb2d2df699f))
+
+
+
+## [4.2.5](https://github.com/ovh/manager/compare/@ovh-ux/manager-public-cloud@4.2.4...@ovh-ux/manager-public-cloud@4.2.5) (2020-10-20)
+
+
+### Bug Fixes
+
+* **deps:** add missing dependency ([#3874](https://github.com/ovh/manager/issues/3874)) ([0750a41](https://github.com/ovh/manager/commit/0750a418809a158262ea27cdb5c42080592dec90))
+
+
+
+## [4.2.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-public-cloud@4.2.3...@ovh-ux/manager-public-cloud@4.2.4) (2020-10-20)
+
+
+### Bug Fixes
+
+* **deps:** upgrade ovh-api-services to v11.0.0 ([#3869](https://github.com/ovh/manager/issues/3869)) ([df90e4d](https://github.com/ovh/manager/commit/df90e4de660920e3cd07b2ff6b4452b0aa861377))
+
+
+
+## [4.2.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-public-cloud@4.2.2...@ovh-ux/manager-public-cloud@4.2.3) (2020-10-13)
+
+
+### Bug Fixes
+
+* **deps:** upgrade to @ovh-ux/manager-config v2.0.0 ([ca3f955](https://github.com/ovh/manager/commit/ca3f9554c13b1436cbdeed3de8ac69e399d5dd93))
+
+
+
 ## [4.2.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-public-cloud@4.2.1...@ovh-ux/manager-public-cloud@4.2.2) (2020-10-02)
 
 

@@ -83,8 +83,6 @@ angular
       'directives',
       ngQAllSettled,
       'ngMessages',
-      'ngFlash',
-      'vs-repeat',
       'xeditable',
       ngAtInternet,
       ngAtInternetUiRouterPlugin,
@@ -511,16 +509,6 @@ angular
     );
   })
   .constant('UNIVERSE', 'WEB')
-  .constant('MANAGER_URLS', {
-    web: 'https://www.ovh.com/manager/web/index.html#/',
-    dedicated: 'https://www.ovh.com/manager/dedicated/index.html#/',
-    cloud: 'https://www.ovh.com/manager/cloud/index.html#/',
-    telecom: 'https://www.ovhtelecom.fr/manager/index.html#/',
-    sunrise: 'https://www.ovh.com/manager/sunrise/index.html#/',
-    portal: 'https://www.ovh.com/manager/portal/index.html#/',
-    partners: 'https://www.ovh.com/manager/partners/',
-    labs: 'https://www.ovh.com/manager/sunrise/uxlabs/#!/',
-  })
   .run(
     /* @ngInject */ ($rootScope, $state) => {
       $state.defaultErrorHandler((error) => {

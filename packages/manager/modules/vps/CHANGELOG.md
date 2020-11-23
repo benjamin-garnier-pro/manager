@@ -1,3 +1,79 @@
+## [2.2.5](https://github.com/ovh/manager/compare/@ovh-ux/manager-vps@2.2.4...@ovh-ux/manager-vps@2.2.5) (2020-11-16)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 636] ([da5b51b](https://github.com/ovh/manager/commit/da5b51b1df6466ec8fda13ce91397d0ede15f46c))
+* **i18n:** add missing translations [CDS 639] ([ddb4bd2](https://github.com/ovh/manager/commit/ddb4bd2daec6972c4ac7696aac6541da1d1a3e26))
+* **vps:** remove maintenance warning message ([#3999](https://github.com/ovh/manager/issues/3999)) ([07baf91](https://github.com/ovh/manager/commit/07baf913e1b4e66d0fd87611134004f7a036eb27))
+
+
+
+## [2.2.4](https://github.com/ovh/manager/compare/@ovh-ux/manager-vps@2.2.3...@ovh-ux/manager-vps@2.2.4) (2020-11-02)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 641] ([aca1160](https://github.com/ovh/manager/commit/aca116038ed96e6bd719012d03a4ecf55da111eb))
+* remove monthly mention for options ([39cac6e](https://github.com/ovh/manager/commit/39cac6ea03138d2d66df1a4aec1ae408843f87c5))
+
+
+
+## [2.2.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-vps@2.2.2...@ovh-ux/manager-vps@2.2.3) (2020-10-28)
+
+
+### Bug Fixes
+
+* **i18n:** add missing translations [CDS 619] ([f6c1b1d](https://github.com/ovh/manager/commit/f6c1b1d5b9e3f910e9f481a8082b2a403efcf8aa))
+* **i18n:** add missing translations [CDS 623] ([848d332](https://github.com/ovh/manager/commit/848d332869776013d0c71e74e5cb57a9b6a0b0b4))
+* **i18n:** add missing translations [CDS 627] ([8abdcc9](https://github.com/ovh/manager/commit/8abdcc9ebbb092968f07f78e5ff688796eb651f3))
+* **i18n:** add missing translations [CDS 629] ([f228d28](https://github.com/ovh/manager/commit/f228d280763c30b89c357196bfb283807b5931d7))
+* **monitoring-sla:** allow to activate monitoring ([#3896](https://github.com/ovh/manager/issues/3896)) ([5972037](https://github.com/ovh/manager/commit/5972037618ab06539376d017b296d479632e949e))
+* **peer-deps:** upgrade @ovh-ux/ui-kit to v4.4.1 ([8254623](https://github.com/ovh/manager/commit/82546237336e185ae7d973a1bb2aabddbb50112e))
+
+
+
+## [2.2.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-vps@2.2.1...@ovh-ux/manager-vps@2.2.2) (2020-10-20)
+
+
+### Bug Fixes
+
+* **deps:** upgrade ovh-api-services to v11.0.0 ([#3869](https://github.com/ovh/manager/issues/3869)) ([df90e4d](https://github.com/ovh/manager/commit/df90e4de660920e3cd07b2ff6b4452b0aa861377))
+* get option price by capacity instead of duration ([#3866](https://github.com/ovh/manager/issues/3866)) ([c8d26b0](https://github.com/ovh/manager/commit/c8d26b0584a28fa7229da3991a1d2332e60eaa44))
+
+
+
+## [2.2.1](https://github.com/ovh/manager/compare/@ovh-ux/manager-vps@2.2.0...@ovh-ux/manager-vps@2.2.1) (2020-10-15)
+
+
+### Bug Fixes
+
+* **snapshot.order:** get offer by capacity instead of duration ([#3837](https://github.com/ovh/manager/issues/3837)) ([a2b312e](https://github.com/ovh/manager/commit/a2b312efe6587c3d4726bb1471e678f6904c909b))
+
+
+
+# [2.2.0](https://github.com/ovh/manager/compare/@ovh-ux/manager-vps@2.1.3...@ovh-ux/manager-vps@2.2.0) (2020-10-14)
+
+
+### Features
+
+* **vps.dashboard:** add warning message for maintenance ([#3828](https://github.com/ovh/manager/issues/3828)) ([e503018](https://github.com/ovh/manager/commit/e503018324ece346f04873a557c168ceb75263fb))
+
+
+
+## [2.1.3](https://github.com/ovh/manager/compare/@ovh-ux/manager-vps@2.1.2...@ovh-ux/manager-vps@2.1.3) (2020-10-13)
+
+
+### Bug Fixes
+
+* **deps:** upgrade to @ovh-ux/manager-config v2.0.0 ([ca3f955](https://github.com/ovh/manager/commit/ca3f9554c13b1436cbdeed3de8ac69e399d5dd93))
+* **i18n:** add missing translations [CDS 594] ([53e8fd1](https://github.com/ovh/manager/commit/53e8fd115cdf8fbca183cd6e123ffdd92cfa7980))
+* **i18n:** add missing translations [CDS 595] ([fe5e042](https://github.com/ovh/manager/commit/fe5e042913cd90b3e2bf1be6891098b544d784f5))
+* **i18n:** add missing translations [CDS 599] ([1a2a0a9](https://github.com/ovh/manager/commit/1a2a0a91293287a9557396f75ca91995fe0bdbc7))
+* **i18n:** add missing translations [CDS 605] ([95c86b7](https://github.com/ovh/manager/commit/95c86b75448550a605e6569367bd0fef8fddbde0))
+
+
+
 ## [2.1.2](https://github.com/ovh/manager/compare/@ovh-ux/manager-vps@2.1.1...@ovh-ux/manager-vps@2.1.2) (2020-10-07)
 
 
